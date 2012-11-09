@@ -1,8 +1,16 @@
 (ns lunch-picker.views.welcome
-  (:require [lunch-picker.views.common :as common]
-            [noir.content.getting-started])
+  (:require [lunch-picker.views.common :as common])
   (:use [noir.core :only [defpage]]))
 
-(defpage "/welcome" []
+(defpage "/" []
+         (def types ["mexican" "chinese" "american" "italian"])
          (common/layout
-           [:p "Welcome to lunch-picker"]))
+            [:p "Welcome to Lunch Picker"]
+               [:div 
+                (for [x types] x 
+;                  [:label {:for x} x]
+;                  [:input {:type "radio" :name "type" :value x}]         
+                )
+              ]
+         )
+)

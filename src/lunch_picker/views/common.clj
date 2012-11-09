@@ -5,7 +5,7 @@
 (defpartial layout [& content]
             (html5
               [:head
-               [:title "lunch-picker"]
+               [:title "Lunch Picker"]
                (include-css "/css/reset.css")]
               [:body
                [:div#wrapper
